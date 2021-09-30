@@ -1,10 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 #define EPSILON 1
 #define SIGMA 1
-const double Rc=2.5  /* global constant */
-
-
+const double Rc=2.5;  /* global constant */
 
 
 void interactions(double x1, double y1, double x2, double y2,
@@ -14,7 +14,7 @@ void interactions(double x1, double y1, double x2, double y2,
     double dy = y2 - y1;
     double r2 = pow(dx, 2) + pow(dy, 2);
     
-    u12 = 4 * EPSION * ((SIGMA**2 / r2)**6 - (SIGMA**2 / r2)**3)
+    u12 = 4 * EPSILON * ((SIGMA**2 / r2)**6 - (SIGMA**2 / r2)**3);
     
     f12x = EPSILON * (48 * dx * pow(SIGMA, 12) / pow(r2, 7)
     - 24 * dx * pow(SIGMA, 6) / pow  (r2, 4));
