@@ -10,17 +10,6 @@
 #define EPSILON 1
 #define SIGMA 1
 
-
-/* Defining factorial function to determine the number
- * of interactions. */
-long factorial(int n)
-{
-    if (n==0)
-        return 1;
-    else
-        return n*factorial(n-1);
-}
-
     
 /* Lennard-Jones potential (force) */
 void lennard_jones_f(double x1, double x2, double y1, double y2, double *fx, double *fy)
@@ -91,9 +80,6 @@ int main(int argc, char *argv[])
         {100, 15, 0, 0},
         {35, 200, 0, 0}
     };
-    // Number of interactions
-    int Ni = factorial(Np - 1);
-    
     // Velocity-Verlet call
     double t = 0;
     
