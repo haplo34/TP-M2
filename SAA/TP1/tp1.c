@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     
     for(double i=0; i<N; i++)
     {
-        double c = a*b;
+        double c = a/b;
     }
     
     printf("arguments supplied are: %s, %s, %s\n", argv[1], argv[2], argv[3]);
